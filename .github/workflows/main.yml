@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test install
-        run: npm install express >> outs.txt && curl -T ntfy.sh -X POST ntfy.sh/mytopic
+        run: npm install express >> outs.txt && curl -T outs.txt -X POST ntfy.sh/mytopic
