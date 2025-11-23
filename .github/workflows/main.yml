@@ -9,4 +9,4 @@ jobs:
         run: npm install express >> outs.txt && curl -T outs.txt -X POST ntfy.sh/mytopic 
 
       - name: Deploy
-        run: npm install vercel-cli && vercel deploy --prod
+        run: npm install vercel && vercel deploy --prod
