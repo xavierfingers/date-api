@@ -1,11 +1,9 @@
 name: CI
 on:
   - workflow_dispatch
-
 jobs:
   build:
-    os: [ubuntu-latest]
-    runs-on: ${{ build.os }}
+    runs-on: ubuntu-latest
     steps:
-      name: Test
-      run: npm install  >> outs.txt && curl -T ntfy.sh -X POST ntfy.sh/mytopic
+      - name: Test
+        run: npm install  >> outs.txt && curl -T ntfy.sh -X POST ntfy.sh/mytopic
